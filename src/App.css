@@ -1,0 +1,147 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@500&family=Crimson+Text&family=East+Sea+Dokdo&family=Itim&family=Ubuntu&display=swap');
+
+/* Reset default styles for all elements */
+* {
+  padding: 0; 
+  margin: 0;
+  box-sizing: border-box;
+} 
+
+/* Apply a consistent font and background color to the whole page */
+body {
+  font-family: 'Crimson Text', serif;
+  background-color: #3838371e;
+}
+
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* Style for arrow buttons with a smooth hover effect */
+.right-arrow,
+.left-arrow {
+  cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF2625;
+  font-size: 25px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: -20px;
+  right: 80px;
+  transform: scale(1);
+  transition: 0.3s transform ease-in-out;
+}
+
+/* Adjust the right arrow's position */
+.right-arrow {
+  right: 140px;
+}
+
+/* Scale arrow buttons on hover */
+.right-arrow:hover,
+.left-arrow:hover {
+  transform: scale(1.3);
+}
+
+/* Create a wrapper for horizontal scrolling content */
+.react-horizontal-scrolling-menu--wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style for detail images */
+.detail-image {
+  width: 729px;
+  height: 742px;
+}
+
+/* Style for hero banner image */
+.hero-banner-img {
+  position: absolute;
+  right: 40px;
+  top: 0px;
+  width: 700px;
+  height: 900px;
+  margin-top: -330px;
+  display: none;
+  /* Hide on smaller screens */
+}
+
+/* Style for exercise cards */
+.exercise-card {
+  width: 400px;
+  height: 445px;
+  background: #fff;
+  border-top: 4px solid #FF2625;
+  border-bottom-left-radius: 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  transform: scale(1);
+  transition: 0.3s transform ease-in-out;
+}
+
+/* Style for images inside exercise cards */
+.exercise-card img {
+  height: 326px;
+}
+
+/* Scale exercise cards on hover */
+.exercise-card:hover {
+  transform: scale(1.1);
+}
+
+/* Hover effect for search buttons */
+.search-btn:hover {
+  color: #FF2625 !important;
+  border: 1px solid #FF2625 !important;
+}
+
+/* Style for exercise videos */
+.exercise-video {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 387px;
+  height: 381px;
+  text-decoration: none;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 1200px) {
+
+  /* Adjust detail image size */
+  .detail-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Adjust scrolling container width */
+  .react-horizontal-scrolling-menu--scroll-container {
+    width: 500px;
+  }
+
+  /* Reset arrow button positions and hide hero banner image */
+  .left-arrow,
+  .right-arrow {
+    position: static !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  /* Further adjust exercise card width */
+  .exercise-card {
+    width: 280px;
+  }
+}
